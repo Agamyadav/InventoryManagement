@@ -1,0 +1,48 @@
+# Ignore node_modules in both backend and frontend
+backend/node_modules/
+frontend/node_modules/
+
+# Ignore environment variables
+backend/.env
+frontend/.env
+backend/.env.local
+frontend/.env.local
+backend/.env.development
+frontend/.env.development
+backend/.env.production
+frontend/.env.production
+backend/.env.test
+frontend/.env.test
+
+# Ignore logs
+backend/logs/
+frontend/logs/
+*.log
+npm-debug.log
+yarn-error.log
+
+# Ignore build files
+backend/dist/
+backend/build/
+frontend/dist/
+frontend/build/
+frontend/.next/  # If using Next.js
+
+# Cache & Temporary files
+backend/.cache/
+frontend/.cache/
+backend/public/
+frontend/public/
+backend/.out/
+frontend/.out/
+
+# Ignore package manager lock files (optional)
+backend/package-lock.json
+backend/yarn.lock
+frontend/package-lock.json
+frontend/yarn.lock
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.DS_Store
