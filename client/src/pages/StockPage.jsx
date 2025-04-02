@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import StockCard from '../components/StockCard';
 import { getFranchiseStock } from '../Services/stockService';
 function StockPage({inventoryId}) {
-
+const [inventories,setInventories] = useState([]);
+  
     const [stocks,setStock] = useState([]);
     const franchise = JSON.parse(localStorage.getItem('selectedFranchise'));
     useEffect(()=>{
@@ -40,6 +41,17 @@ function StockPage({inventoryId}) {
                     },
                 }}
             >
+                  {inventories&&inventories.map((inventory) => (
+                <div key={inventory._id} className="mb-6 border p-4 rounded-md shadow-md bg-white flex flex-col justify-center gap-3">
+                    <h3 className="text-lg font-semibold mb-8 text-center">{inventory.inventoryName}</h3>
+                    <button onClick={()=>(window.location.href = `/#stocks/${inventory._id}`)} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+                        Manage Inventory
+                    </button>
+                    <button onClick={()=>(handleDelete(inventory._id))} className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors">
+                        Delete
+                    </button>
+                </div>
+                ))}
                 {stocks&&stocks.map((stock) => (
                     <motion.div key={stock._id} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
                         <StockCard

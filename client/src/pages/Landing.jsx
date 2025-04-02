@@ -213,9 +213,6 @@ function Login({setLogin}){
         localStorage.setItem("status", true);
         window.location.reload();
       }
-      else{
-        localStorage.setItem("status", false);
-      }
     }
   }
   return (
