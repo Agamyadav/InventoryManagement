@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/sales';
+const API_URL = 'https://inventorymanagement-3isj.onrender.com/api/sales';
 
 
 const createSale = async (franchiseId, saleItems, saleAmount, saleDate) => {

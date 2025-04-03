@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/order';
+const API_URL = 'https://inventorymanagement-3isj.onrender.com/api/order';
 const fetchOrders = async (franchiseId) => {
     const token = JSON.parse(localStorage.getItem('accessToken')); 
     try {

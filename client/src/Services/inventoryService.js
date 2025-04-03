@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/inventory';
+const API_URL = 'https://inventorymanagement-3isj.onrender.com/api/inventory';
 
 const createInventory = async (businessId, inventoryName) => {
     try {

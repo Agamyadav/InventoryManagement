@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/dashboard';
+const API_URL = 'https://inventorymanagement-3isj.onrender.com/api/dashboard';
 const fetchLowStockItems = async (franchiseId) => {
     try {
         const token = JSON.parse(localStorage.getItem('accessToken')); 
